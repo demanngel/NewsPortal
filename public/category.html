@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Категория новостей</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-<header>
-    <div class="logo"><img src="images/logo.svg" alt=""></div>
-    <nav class="navbar">
-        <ul class="menu-items">
-            <!-- Категории новостей -->
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="category.html">Политика</a></li>
-            <li><a href="category.html">Спорт</a></li>
-            <li><a href="category.html">Технологии</a></li>
-        </ul>
-    </nav>
-    <button class="login-btn">Вход</button>
-</header>
-<main>
-    <h1>Новости по категории</h1>
-    <section class="search">
-        <h2>Поиск</h2>
-        <input type="text" placeholder="Поиск новостей">
-        <button>Поиск</button>
-    </section>
-    <section class="category-news">
-        <ul class="news-list">
-            <!-- Заголовки новостей данной категории -->
-            <li><a href="news.html">Заголовок новости 1</a></li>
-            <li><a href="news.html">Заголовок новости 2</a></li>
-            <li><a href="news.html">Заголовок новости 3</a></li>
-        </ul>
-    </section>
-</main>
-<script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Категория новостей</title>
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="menu">
+                <a class="logo-btn" href="index.html"><img class="logo" src="images/logo.svg" alt=""></a>
+                <div><button class="login-btn">Вход</button></div>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <button class="sidebar-toggle-btn">&#9776;</button>
+            <h2>Категории</h2>
+            <ul class="category-list">
+                <li><a href="category.html">Политика</a></li>
+                <li><a href="category.html">Спорт</a></li>
+                <li><a href="category.html">Технологии</a></li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <div class="main-content">
+                <h1>Новости по категории</h1>
+                <section class="search">
+                    <h2>Поиск</h2>
+                    <input type="text" placeholder="Поиск новостей">
+                    <button>Поиск</button>
+                </section>
+                <section class="category-news">
+                    <ul class="news-list">
+                        <!-- Заголовки новостей данной категории -->
+                        <li><a href="news.html">Заголовок новости 1</a></li>
+                        <li><a href="news.html">Заголовок новости 2</a></li>
+                        <li><a href="news.html">Заголовок новости 3</a></li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+        <script src="scripts/index.js"></script>
+    </body>
 </html>

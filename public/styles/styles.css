@@ -39,6 +39,12 @@ body {
     height: 100%;
 }
 
+.logo-btn {
+    display: inline-block;
+    cursor: pointer;
+    height: 100%;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -92,7 +98,7 @@ body {
 }
 
 /* Стили для главной страницы */
-.latest-news {
+.main-content {
     margin-left: 5%;
     margin-right: 5%;
     /*display: flex;
