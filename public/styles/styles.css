@@ -1,0 +1,256 @@
+/* styles.css */
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Белый фон */
+    color: #000; /* Чёрный текст */
+}
+
+.header {
+    background-color: #000;
+    color: #fff;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+.menu {
+    padding: 0 20px;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu * {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.logo {
+    color: white;
+    height: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.burger-menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.menu-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-items li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu-items li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.login-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.main {
+    padding-top: 15vh;
+    position: fixed;
+    width: 100vw;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+}
+
+/* Стили для главной страницы */
+.latest-news {
+    margin-left: 5%;
+    margin-right: 5%;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+}
+
+.news-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.news-list li {
+    margin-bottom: 10px;
+}
+
+.news-list li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.news-list li a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для страницы категории */
+.category-news {
+    margin-bottom: 40px;
+}
+
+.search input[type="text"] {
+    width: calc(100% - 80px);
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.search button {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #333;
+}
+
+/* Стили для страницы новости */
+.news {
+    margin-bottom: 40px;
+}
+
+.editor {
+    margin-bottom: 20px;
+}
+
+.like-btn {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.like-btn:hover {
+    background-color: #333;
+}
+
+.comments textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.comments button {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.comments button:hover {
+    background-color: #333;
+}
+
+.sidebar {
+    width: 20vw; /* Ширина боковой панели */
+    background-color: #f0f0f0; /* Цвет фона */
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: -20vw; /* Боковая панель скрыта за левым краем экрана */
+    height: 100%;
+    overflow-y: auto; /* Разрешение прокрутки, если высота содержимого больше высоты панели */
+}
+
+.sidebar.open {
+    transition: left 0.3s ease;
+    left: 0; /* Открытие боковой панели */
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.category-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li {
+    margin-bottom: 10px;
+}
+
+.category-list li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.category-list li a:hover {
+    text-decoration: underline;
+}
+
+.sidebar-toggle-btn {
+    position: fixed;
+    left: -5px;
+    top: 50%;
+    padding: 10px 5px 10px 10px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 999; /* Чтобы кнопка была поверх всего */
+}
+
+.content {
+    margin-left: 20vw; /* Ширина боковой панели */
+    transition: margin-left 0.3s ease; /* Анимация для плавного изменения ширины */
+}
+
+.header.open {
+    transition: width 0.3s ease;
+    width: 80vw;
+    position: fixed;
+    right: 0;
+}
+
+.main.open {
+    transition: width 0.3s ease;
+    width: 80vw;
+    right: 0;
+}
+
+.sidebar-toggle-btn.open {
+    transition: left 0.3s ease;
+    left: calc(20vw - 5px);
+}
