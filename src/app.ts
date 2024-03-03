@@ -5,6 +5,7 @@ import categoriesRoutes from "./routes/categoriesRoutes";
 const app: Application = express();
 
 
+
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

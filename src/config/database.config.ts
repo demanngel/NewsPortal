@@ -1,13 +1,12 @@
 import { ConnectionOptions } from 'typeorm';
 
 const connectionOptions: ConnectionOptions = {
-    type: 'postgres',
+    type: 'mysql',
     host: 'localhost',
-    port: 5432,
-    username: 'postgres',
-    password: 'postgres',
+    username: 'root',
+    password: '11032004',
     database: 'newsportal',
-    entities: [__dirname + '../models/*.ts'], // Путь к вашим моделям
+    entities: ['src/models/*.ts'], // Путь к вашим моделям
     synchronize: true, // Автоматическое создание схемы базы данных (только для разработки)
 };
 

@@ -1,6 +1,6 @@
 import app from './app';
 import { createConnection } from 'typeorm';
-import connectionOptions from './config/database';
+import connectionOptions from './config/database.config';
 
 const PORT: number = 3000;
 
