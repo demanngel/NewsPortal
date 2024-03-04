@@ -1,10 +1,9 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
 import path from 'path';
-import categoriesRoutes from "./routes/categoriesRoutes";
+import bodyParser from 'body-parser';
+import categoriesRoutes from "./Category/category.routes";
 
 const app: Application = express();
-
-
 
 // Middleware
 app.use(express.json());

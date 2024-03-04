@@ -1,6 +1,7 @@
 import app from './app';
-import { createConnection } from 'typeorm';
-import connectionOptions from './config/database.config';
+import {createConnection} from 'typeorm';
+import connectionOptions from './Config/database.config';
+import {DataSource} from "typeorm";
 
 const PORT: number = 3000;
 
