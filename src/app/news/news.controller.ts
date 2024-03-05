@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
-import { News } from '../Models/News';
+import { News } from '../../models/News';
 
 // Функция для получения списка новостей
 export const getNewsList = async (req: Request, res: Response) => {

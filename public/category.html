@@ -10,18 +10,14 @@
         <header class="header">
             <div class="menu">
                 <a class="logo-btn" href="index.html"><img class="logo" src="images/logo.svg" alt=""></a>
-                <div><button class="login-btn">Вход</button></div>
+                <div><button class="login-btn" type="button">Вход</button></div>
             </div>
         </header>
 
         <aside class="sidebar">
-            <button class="sidebar-toggle-btn">&#9776;</button>
+            <button class="sidebar-toggle-btn" type="button">&#9776;</button>
             <h2>Категории</h2>
-            <ul class="category-list">
-                <li><a href="category.html">Политика</a></li>
-                <li><a href="category.html">Спорт</a></li>
-                <li><a href="category.html">Технологии</a></li>
-            </ul>
+            <ul id="category-list" class="category-list"></ul>
         </aside>
 
         <main class="main">
@@ -40,6 +36,20 @@
                         <li><a href="news.html">Заголовок новости 3</a></li>
                     </ul>
                 </section>
+            </div>
+
+            <div class="login-modal" id="loginModal">
+                <div class="login-content">
+                    <span class="close-btn" id="closeBtn">&times;</span>
+                    <h2>Вход</h2>
+                    <form action="" method="">
+                        <label for="username">Имя пользователя:</label>
+                        <input type="text" id="username" name="username">
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password">
+                        <button class = "login-btn1" type="submit">Войти</button>
+                    </form>
+                </div>
             </div>
         </main>
         <script src="scripts/index.js"></script>

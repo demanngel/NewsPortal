@@ -1,9 +1,9 @@
 import app from './app';
 import {createConnection} from 'typeorm';
-import connectionOptions from './Config/database.config';
-import {DataSource} from "typeorm";
+import connectionOptions from './config/database.config';
+import {getPort} from "./config/env.config";
 
-const PORT: number = 3000;
+const port = getPort();
 
 createConnection(connectionOptions)
     .then(async () => {
@@ -12,6 +12,6 @@ createConnection(connectionOptions)
     })
     .catch(error => console.log('Ошибка при подключении к базе данных:', error));
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });

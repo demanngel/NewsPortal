@@ -1,7 +1,8 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
 import path from 'path';
-import bodyParser from 'body-parser';
-import categoriesRoutes from "./Category/category.routes";
+import categoriesRoutes from "./app/category/category.routes";
+import userRoutes from "./app/user/user.routes";
+import jwt from 'jsonwebtoken';
 
 const app: Application = express();
 
@@ -11,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.use(categoriesRoutes);
+app.use(userRoutes);
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public', 'index.html'));

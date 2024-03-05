@@ -18,6 +18,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    z-index: 2;
 }
 
 .menu {
@@ -92,6 +93,7 @@ body {
     padding-top: 15vh;
     position: fixed;
     width: 100vw;
+    z-index: 1;
     /*display: flex;
     flex-direction: column;
     align-items: center;*/
@@ -195,6 +197,7 @@ body {
     left: -20vw; /* Боковая панель скрыта за левым краем экрана */
     height: 100%;
     overflow-y: auto; /* Разрешение прокрутки, если высота содержимого больше высоты панели */
+    z-index: 3;
 }
 
 .sidebar.open {
@@ -235,7 +238,7 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    z-index: 999; /* Чтобы кнопка была поверх всего */
+    z-index: 3; /* Чтобы кнопка была поверх всего */
 }
 
 .content {
@@ -260,3 +263,78 @@ body {
     transition: left 0.3s ease;
     left: calc(20vw - 5px);
 }
+
+/* Скрыть окно входа по умолчанию */
+.login-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.login-content {
+    background-color: #fefefe;
+    margin: 25% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40vw;
+}
+.login-content h2 {
+    margin: 0;
+}
+
+.login-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-content form label {
+    margin-top: 10px;
+}
+
+.login-btn1 {
+    width: 20%;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Стили для разделов */
+.section {
+    margin-bottom: 20px;
+
+}
+
+.section-title {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.section-title:hover {
+    background-color: #e0e0e0;
+}
+
+.section-content {
+    display: none;
+}
+
+.section-content * {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+
